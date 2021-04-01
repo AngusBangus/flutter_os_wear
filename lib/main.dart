@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_os_wear/screens/ambient_screen.dart';
 import 'package:flutter_os_wear/screens/start_screen.dart';
@@ -22,11 +21,11 @@ class WatchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => WatchShape(
         builder: (context, shape) => InheritedShape(
-              shape: shape,
-              child: AmbientMode(
-                builder: (context, mode) =>
-                    mode == Mode.active ? StartScreen() : AmbientWatchFace(),
-              ),
-            ),
+          shape: shape,
+          child: AmbientMode(
+            builder: (context, mode) =>
+                mode == Mode.active ? StartScreen() : AmbientWatchFace(),
+          ),
+        ),
       );
 }
